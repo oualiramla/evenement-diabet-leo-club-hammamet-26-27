@@ -2,252 +2,129 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leo Club Hammamet - Sensibilisation au diabète</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leo Club Hammamet · Sensibilisation au diabète</title>
 <style>
+:root{--bg:#eef5fb;--card:#fff;--txt:#12365a;--h2:#0b4f7c;--soft:#dff0fb;--line:#e1ecf5;--acc:#1e88c8;
+--rbb:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");
+--rbw:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");
+--rbf:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='.09' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1d2e;--card:#12293f;--txt:#dbe9f6;--h2:#7cc4f0;--soft:#173a58;--line:#25435f}}
+:root[data-theme="dark"]{--bg:#0c1d2e;--card:#12293f;--txt:#dbe9f6;--h2:#7cc4f0;--soft:#173a58;--line:#25435f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;font-family:Segoe UI,Tahoma,Arial,sans-serif;background:#eef5fb;color:#12365a;line-height:1.7}
-header{background:linear-gradient(135deg,#0b4f7c,#1e88c8);color:#fff;text-align:center;padding:24px 16px}
-header img{width:120px;background:#fff;border-radius:50%;padding:8px}
-header h1{margin:10px 0 4px;font-size:1.5rem}
-.sl{font-size:1.3rem;font-weight:bold;letter-spacing:2px}
-.lang{position:absolute;top:10px;right:10px}
-.lang button{background:#fff;color:#0b4f7c;border:0;border-radius:20px;padding:8px 16px;font-weight:bold;cursor:pointer}
-main{max-width:800px;margin:auto;padding:16px}
-section{background:#fff;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(11,79,124,.12)}
-h2{color:#0b4f7c;margin-top:0;border-bottom:3px solid #1e88c8;padding-bottom:6px}
-.pos{background:#dff0fb;border-radius:12px;padding:12px;text-align:center;font-weight:bold}
-.q{padding:10px 0;border-bottom:1px solid #e1ecf5}
-.q label{margin-inline-end:16px;cursor:pointer}
-input[type=number]{width:110px;padding:8px;border:1px solid #9ec5e3;border-radius:8px}
-.btn{background:#0b4f7c;color:#fff;border:0;border-radius:25px;padding:12px 28px;font-size:1rem;cursor:pointer;margin-top:12px}
-#res{display:none}
-.low{color:#1b8a3a}.mid{color:#d98200}.high{color:#c62828}
-footer{text-align:center;padding:20px;background:#0b4f7c;color:#fff;font-size:.9rem}
-body.ar .fr{display:none} body:not(.ar) .arb{display:none}
-body.ar{direction:rtl}
-/* ribbon-style */
-body{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='0.10' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");background-size:80px 80px}
-header{position:relative}
-header::before,header::after{content:"";position:absolute;top:24px;width:80px;height:80px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
-header::before{left:16px}
-header::after{right:16px}
-h2::before{content:"";display:inline-block;width:30px;height:30px;margin-inline-end:10px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
-.pos::before,.pos::after{content:"";display:inline-block;width:26px;height:26px;margin:0 8px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
-footer::before{content:"";display:block;height:46px;margin-bottom:10px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") repeat-x center/46px}
-@media(max-width:560px){header::before,header::after{width:42px;height:42px;top:60px}}
-/* ribbon-style */
-body{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='0.10' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");background-size:80px 80px}
-header{position:relative}
-header::before,header::after{content:"";position:absolute;top:24px;width:80px;height:80px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
-header::before{left:16px}
-header::after{right:16px}
-h2::before{content:"";display:inline-block;width:30px;height:30px;margin-inline-end:10px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
-.pos::before,.pos::after{content:"";display:inline-block;width:26px;height:26px;margin:0 8px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
-footer::before{content:"";display:block;height:46px;margin-bottom:10px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") repeat-x center/46px}
-@media(max-width:560px){header::before,header::after{width:42px;height:42px;top:60px}}
+[hidden]{display:none!important}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background-color:var(--bg);background-image:var(--rbf);background-size:80px 80px;color:var(--txt);line-height:1.7}
+header{position:relative;background:linear-gradient(135deg,#0b4f7c,#1e88c8);color:#fff;text-align:center;padding:16px 16px 26px}
+header::before,header::after{content:"";position:absolute;top:70px;width:76px;height:76px;background:var(--rbw) no-repeat center/contain}
+header::before{left:16px}header::after{right:16px}
+.lang{display:flex;gap:6px;justify-content:center;margin-bottom:12px}
+.lang button{border:0;border-radius:20px;padding:7px 14px;font:inherit;font-size:.85rem;font-weight:600;background:#fff;color:#0b4f7c;cursor:pointer}
+.lang button.on{background:#0a3a5c;color:#fff;outline:2px solid #fff}
+.lang button:focus-visible,.btn:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
+.lg{width:112px;height:112px;background:#fff;border-radius:50%;padding:8px}
+.sl{font-size:1.25rem;font-weight:700;letter-spacing:.2em;margin-top:6px}
+h1{margin:8px 0 2px;font-size:1.55rem;line-height:1.25}
+main{max-width:780px;margin:auto;padding:14px}
+section{background:var(--card);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(11,79,124,.14)}
+h2{color:var(--h2);margin:0 0 8px;font-size:1.2rem;border-bottom:3px solid var(--acc);padding-bottom:6px}
+h2::before{content:"";display:inline-block;width:28px;height:28px;margin-inline-end:10px;vertical-align:middle;background:var(--rbb) no-repeat center/contain}
+.pos{background:var(--soft);border-radius:14px;padding:14px;text-align:center;font-weight:700;margin:16px 0}
+.pos::before,.pos::after{content:"";display:inline-block;width:24px;height:24px;margin:0 8px;vertical-align:middle;background:var(--rbb) no-repeat center/contain}
+.q{padding:10px 0;border-bottom:1px solid var(--line)}
+.q label{margin-inline-end:18px;cursor:pointer}
+.bm{display:flex;gap:14px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px solid var(--line)}
+input[type=number]{width:100px;padding:8px;border:1px solid #7fb3d9;border-radius:8px;background:var(--card);color:var(--txt);font:inherit}
+.btn{background:#0b4f7c;color:#fff;border:0;border-radius:26px;padding:12px 28px;font:inherit;font-weight:600;cursor:pointer;margin-top:14px}
+#lvl{font-size:1.25rem;font-weight:700}.low{color:#1b8a3a}.mid{color:#d98200}.high{color:#d32f2f}
+small{opacity:.8}
+footer{text-align:center;padding:18px 16px;background:#0b4f7c;color:#fff;font-size:.9rem}
+footer::before{content:"";display:block;height:44px;margin-bottom:10px;background:var(--rbw) repeat-x center/44px}
+footer .lg{width:84px;height:84px;margin-bottom:6px}
+@media(max-width:560px){header::before,header::after{width:38px;height:38px;top:96px}h1{font-size:1.3rem}}
 </style>
-<link rel="icon" href="logo2.png">
 </head>
 <body>
-<div class="lang"><button onclick="document.body.classList.toggle('ar')">FR / عربي</button></div>
 <header>
-<img src="logo.png" alt="Leo Club Hammamet">
-<svg width="70" height="70" viewBox="0 0 100 100" style="margin:8px"><circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="10"/></svg>
+<div class="lang" id="lang"></div>
+<img class="lg" alt="Leo Club Hammamet">
 <div class="sl">WE SERVE</div>
-<h1><span class="fr">Journée de sensibilisation au diabète</span><span class="arb">يوم التوعية بمرض السكري</span></h1>
-<div><span class="fr">Leo Club Hammamet - Mandat 2026-2027</span><span class="arb">ليو كلوب الحمامات - عهدة 2026-2027</span></div>
+<h1 data-t="title"></h1>
+<div data-t="sub"></div>
 </header>
 <main>
-<div class="pos">
-<span class="fr">Ta santé est ta richesse. Prends soin de toi, nous sommes là pour te servir !</span>
-<span class="arb">صحتك هي ثروتك. اعتن بنفسك، نحن هنا لخدمتك !</span>
-</div>
-
+<div class="pos" data-t="pos"></div>
+<section><h2 data-t="hd"></h2><p data-t="df"></p></section>
+<section><h2 data-t="hs"></h2><ul data-l="sy"></ul></section>
+<section><h2 data-t="hh"></h2><ul data-l="hy"></ul></section>
 <section>
-<h2>🩸 <span class="fr">C'est quoi le diabète ?</span><span class="arb">ما هو مرض السكري ؟</span></h2>
-<p class="fr">Le diabète est une maladie où il y a trop de sucre dans le sang. Le corps ne fabrique pas assez d'insuline, ou il ne l'utilise pas bien. Il existe le type 1 (souvent chez les jeunes), le type 2 (le plus fréquent, lié au mode de vie) et le diabète de grossesse.</p>
-<p class="arb">السكري مرض يرتفع فيه مستوى السكر في الدم. لا ينتج الجسم ما يكفي من الأنسولين أو لا يستعمله جيدا. يوجد النوع الأول (غالبا عند الشباب) والنوع الثاني (الأكثر انتشارا ومرتبط بنمط الحياة) وسكري الحمل.</p>
-</section>
-
-<section>
-<h2>⚠️ <span class="fr">Les symptômes</span><span class="arb">الأعراض</span></h2>
-<ul class="fr"><li>Grande soif</li><li>Envie d'uriner très souvent</li><li>Grande fatigue</li><li>Vue floue</li><li>Perte de poids sans raison</li><li>Plaies qui guérissent lentement</li></ul>
-<ul class="arb"><li>عطش شديد</li><li>كثرة التبول</li><li>تعب شديد</li><li>ضبابية الرؤية</li><li>نقصان الوزن دون سبب</li><li>بطء التئام الجروح</li></ul>
-</section>
-
-<section>
-<h2>🥗 <span class="fr">Comment rester en bonne santé ?</span><span class="arb">كيف نحافظ على صحتنا ؟</span></h2>
-<ul class="fr"><li>Manger équilibré : légumes, fruits, céréales complètes</li><li>Limiter sucreries et boissons sucrées</li><li>Bouger 30 minutes par jour (marche, sport)</li><li>Garder un poids sain</li><li>Boire de l'eau</li><li>Faire un contrôle de glycémie chaque année</li><li>Dormir suffisamment et gérer le stress</li></ul>
-<ul class="arb"><li>غذاء متوازن : خضر وغلال وحبوب كاملة</li><li>التقليل من الحلويات والمشروبات السكرية</li><li>الحركة 30 دقيقة يوميا (مشي، رياضة)</li><li>المحافظة على وزن صحي</li><li>شرب الماء</li><li>قياس نسبة السكر في الدم كل سنة</li><li>النوم الكافي وتسيير الضغط النفسي</li></ul>
-</section>
-
-<section>
-<h2>📝 <span class="fr">Questionnaire santé</span><span class="arb">استبيان صحي</span></h2>
-<div class="q">
-<span class="fr">Poids (kg)</span><span class="arb">الوزن (كغ)</span> <input type="number" id="poids" min="20" max="300">
-&nbsp;<span class="fr">Taille (cm)</span><span class="arb">الطول (سم)</span> <input type="number" id="taille" min="100" max="230">
+<h2 data-t="hq"></h2>
+<div class="bm">
+<label><span data-t="wk"></span> <input type="number" id="pk" min="20" max="300"></label>
+<label><span data-t="ht"></span> <input type="number" id="tc" min="100" max="230"></label>
 </div>
 <div id="qs"></div>
-<button class="btn" onclick="calcul()"><span class="fr">Voir mon résultat</span><span class="arb">اعرض نتيجتي</span></button>
+<button class="btn" onclick="calc()" data-t="go"></button>
 </section>
-
-<section id="res">
-<h2>💙 <span class="fr">Ton résultat</span><span class="arb">نتيجتك</span></h2>
-<div id="niveau" style="font-size:1.3rem;font-weight:bold"></div>
-<div id="conseils"></div>
-<p><small class="fr">Cette plateforme sert à informer et ne remplace pas un médecin. Aucune donnée n'est enregistrée.</small>
-<small class="arb">هذه المنصة للتوعية فقط ولا تعوض الطبيب. لا يتم حفظ أي بيانات.</small></p>
+<section id="res" hidden>
+<h2 data-t="hr"></h2>
+<div id="lvl"></div>
+<ul id="adv"></ul>
+<small data-t="ds"></small>
 </section>
 </main>
-
 <footer>
-<img src="logo2.png" alt="Leo Club Hammamet" style="width:90px;background:#fff;border-radius:50%;padding:6px;margin-bottom:8px">
-<div><b>WE SERVE</b> - Leo Club Hammamet 2026-2027</div>
-<div><span class="fr">Présidente : Ouali Ramla</span><span class="arb">الرئيسة : Ouali Ramla</span></div>
-<div><span class="fr">Cheffes d'actions : Zaineb Jlassi et Hiba Banneni</span><span class="arb">رئيسات الأنشطة : Zaineb Jlassi و Hiba Banneni</span></div>
+<img class="lg" alt="Leo Club Hammamet">
+<div><b>WE SERVE</b> · Leo Club Hammamet 2026-2027</div>
+<div data-t="pr"></div>
+<div data-t="ch"></div>
 </footer>
-
 <script>
-const Q=[
-{fr:"Y a-t-il du diabète dans ta famille ?",ar:"هل يوجد سكري في عائلتك ؟",p:2,t:null},
-{fr:"As-tu souvent très soif ?",ar:"هل تشعر بالعطش الشديد كثيرا ؟",p:2,t:null},
-{fr:"Urines-tu plus souvent que d'habitude, surtout la nuit ?",ar:"هل تتبول أكثر من العادة خاصة في الليل ؟",p:2,t:null},
-{fr:"Te sens-tu très fatigué(e) sans raison ?",ar:"هل تشعر بتعب شديد دون سبب ؟",p:1,t:null},
-{fr:"As-tu une vue floue ?",ar:"هل تعاني من ضبابية في الرؤية ؟",p:2,t:null},
-{fr:"As-tu perdu du poids sans le vouloir ?",ar:"هل نقص وزنك دون قصد ؟",p:2,t:null},
-{fr:"Tes plaies guérissent-elles lentement ?",ar:"هل تلتئم جروحك ببطء ؟",p:2,t:null},
-{fr:"Fais-tu moins de 30 minutes d'activité physique par jour ?",ar:"هل تمارس أقل من 30 دقيقة من النشاط البدني يوميا ؟",p:1,
- t:{fr:"Essaie de marcher ou de faire du sport 30 minutes chaque jour.",ar:"حاول المشي أو ممارسة الرياضة 30 دقيقة كل يوم."}},
-{fr:"Manges-tu des sucreries ou bois-tu des boissons sucrées tous les jours ?",ar:"هل تأكل الحلويات أو تشرب مشروبات سكرية كل يوم ؟",p:1,
- t:{fr:"Remplace les boissons sucrées par de l'eau et réduis les sucreries.",ar:"عوض المشروبات السكرية بالماء وقلل من الحلويات."}},
-{fr:"As-tu plus de 45 ans ?",ar:"هل عمرك أكثر من 45 سنة ؟",p:1,t:null}
-];
-const c=document.getElementById('qs');
-Q.forEach((q,i)=>{c.innerHTML+=`<div class="q"><div><span class="fr">${q.fr}</span><span class="arb">${q.ar}</span></div>
-<label><input type="radio" name="q${i}" value="1"> <span class="fr">Oui</span><span class="arb">نعم</span></label>
-<label><input type="radio" name="q${i}" value="0"> <span class="fr">Non</span><span class="arb">لا</span></label></div>`});
-
-function calcul(){
- let s=0, cons=[];
- Q.forEach((q,i)=>{const r=document.querySelector(`input[name=q${i}]:checked`);
-  if(r&&r.value==="1"){s+=q.p; if(q.t)cons.push(q.t);}});
- const p=+document.getElementById('poids').value, t=+document.getElementById('taille').value/100;
- if(p&&t){const imc=p/(t*t);
-  if(imc>=30){s+=2;cons.push({fr:"Ton IMC est élevé ("+imc.toFixed(1)+") : une perte de poids progressive protège ton cœur et réduit le risque de diabète.",ar:"مؤشر كتلة جسمك مرتفع ("+imc.toFixed(1)+") : إنقاص الوزن تدريجيا يحمي قلبك ويقلل خطر السكري."});}
-  else if(imc>=25){s+=1;cons.push({fr:"Ton IMC montre un léger surpoids ("+imc.toFixed(1)+") : garde une alimentation équilibrée et bouge davantage.",ar:"مؤشر كتلة جسمك يدل على زيادة طفيفة في الوزن ("+imc.toFixed(1)+") : حافظ على غذاء متوازن وتحرك أكثر."});}
- }
- let n,cl,m;
- if(s<=3){cl="low";n={fr:"Risque faible. Bravo, continue comme ça !",ar:"خطر ضعيف. أحسنت، واصل هكذا !"};m={fr:"Garde de bonnes habitudes et fais un contrôle de glycémie chaque année.",ar:"حافظ على عاداتك الجيدة وقس السكر في الدم مرة كل سنة."};}
- else if(s<=7){cl="mid";n={fr:"Risque moyen. Fais attention à ton hygiène de vie.",ar:"خطر متوسط. انتبه إلى نمط حياتك."};m={fr:"Parle à un médecin et fais un test de glycémie dans les prochains mois.",ar:"تحدث إلى طبيب وقم بتحليل السكر في الأشهر القادمة."};}
- else{cl="high";n={fr:"Risque élevé. Consulte un médecin bientôt.",ar:"خطر مرتفع. استشر طبيبا قريبا."};m={fr:"Prends rendez-vous pour un test de glycémie. Ce n'est pas un diagnostic, mais il vaut mieux vérifier.",ar:"احجز موعدا لتحليل السكر. هذا ليس تشخيصا لكن من الأفضل التحقق."};}
- cons.push(m);
- document.getElementById('niveau').innerHTML=`<span class="${cl}"><span class="fr">${n.fr}</span><span class="arb">${n.ar}</span></span>`;
- document.getElementById('conseils').innerHTML="<ul>"+cons.map(x=>`<li><span class="fr">${x.fr}</span><span class="arb">${x.ar}</span></li>`).join("")+"</ul>";
- const r=document.getElementById('res');r.style.display='block';r.scrollIntoView({behavior:'smooth'});
+const LOGO="data:image/png;base64,UklGRtQVAABXRUJQVlA4IMgVAACQUgCdASrYANgAPp1Gnkslo6MhqFgqGLATiU3cLlIf08us5lf0dmx9gOeYIUAuyh/wPV1/bt2tzunp//s2/U71XkGnnr/Ddq/+F8NfFH6X/ZP2v9dbIvaj/JPth+//vfoJ/rvBX4yf43qBflf83/1/pd/RdlJqX+a/X32BfYb6X/xvCC/o/Qb7H+wB5bd6L6N7An87/x3/i9mb+m/9f+Z8636N/nf/l/ov9F8hn86/t3/d9bf//+3v9sP/j7qP7Uf/8vaSpHRUiGvjVK4ZttZGmj0tiVFFbyomFXrR/Kjc2uQhLT+1kOl/UEUl0rxE4NRim9lxoxsDnL0CMMEOmwj0g9I73aEl4p3+bkFX1KcGwp8k2tSxR1r0VebItTnf/FdosvdiEu10MMCfmL3ZKD4EJEf3NeMr6TR1iU8Ls2t6P4mdUX0Ilm6wKi+fjdCQvfpV1Pxm6zfAznpsJ4tJMq6DfXHHD9l+stPN6GTubHwDXCulF7FkH/bfO3PALcTGr4iupfBGZJNvPk+BPKBZe6K9m3xM8DsC+0znyd2dcD1UHwKWNJTpHStIy2eCvrKJmWd46wI3m9MN1WkE0BFiFShGwye1zredbYZFpiCDN6MAKmvIcEZOqV0XinsGJTAn4VpMJJkU/6iJHaOoox2vqx6x4pgciYDkWlrgTvTbCKEPK6LTqSl/bn+DTxHliPrUdsLjxfb1nD1MVUS5gj1okRmfPL/JbrPdP1zZhdpzzBVBGU5oAcn3xJ2uFGswABBywtzKCO2N9UG6LPSr/xd6RvHOd6fff95h7S/UYC01Sy3qxXDRMNjhzte+Bnvs2XnIdMGoy6usp29wCJobwOxB6rKZEfIqU9hMossHOPsjvWkqR1n4icGxKiiuBLYlRGAA/v8qQACXAbIoC8lPWor9OxNvHg79Mqt1EBlkGB5x6bKE7vQ9wYVGkIVkMmPRiklVmRcK+9JYM52reJSsv1PRi9AGuLg5Th3Gp77DS86cg3+AeT4pPI5Vs1vtOZrqdsrU5+k4JFVZtPSzW63ExqFCMawC9vAfezfXJyb27w0I5EOXlMVp7oPE8hv/j36ZEh/v9njcMwLyi2q65y2R3QgUedv+MYzPlC+7/g1TYrNnC3DIkEuzbnSCPuRlpgHRugcPltZMyNxeLIO1fAT89Iqt9nW/MtCTfVDGQ9RBmmX807Qei8UVyHgTr4pg5BT5kCgXybUN+WXAdKc08t3jamo5P+8rHLzVx0rmY8A9Lezm6CyRZ6D+RCk4nZq4hf3877D96L156FVD0lBzKLqSVPu4rNSI3pCADTB2YHdE+5wBGjj7WElMpj7ruykE6iwdXzgnH6MssW6DER5oOrTd7SUVfnFnRhjY0dG4MvAbH6IPk/bxDNdJwqPNGHfJpln6oCQJDI8nPDcUJ9Ztm6trJR5zFTJapT56keTr983i5D06xC5MqPWLvCvjGuUprkLAst0SoS9+8KHy3WofqFaIcbY0tk1FbNFTrhFLEb5wELtTDVj3KJtvatzm6MP+uhjv+6WHkyyLGGTu1xkaidgTF1ukk8fs16b6iRM/8bUeZHlbQuODepq4e9xBsDnwrF4Mmq2B+Cl8tljGiKWIBYOipSePXs6TKI7jnViva66/Ra9XtnoqUm+4O0ibZHUP7hDa0e0rxFr0P5sA5s5qLy+tLO7KdPDMCUSE1FTDDo3iVt32ASFH5eDPpqaldM4xHnq1SwRHpP9AKP3zbcpN0oMNkVnGP8Wla2CekmmPf13x5tkU4+1JSB8udUYMlT+X6KrJTts9cbIBkDe/rzLjgHoxKlr9nQ79iPUZWF7QHEU9Y9q0IpABSiLPlECjDzD/ij8jvx/ZakZgmkKBTo8m2NEVI0eP4qYrGurwykJyjOXJmoIMtrNQI9ELbEo2QKzRx4FB2h0piPUx6m6dy+Dhwsuw0huHdm/Dg2bym13KCSUtNvyGXsF7vKUDX+0uueHBDgQCrJZMUX/+rMpRDnwxdH6Hsv5+/Kl+L16E9Fd9yvTrlBQNYyQANC1Pl1gtMwuxjINhnngD/gjvJ4EmEOuWPSyDlZt8BoBNzX5mns8Q/SBVdmHHg3hC4V7YwFBPZhtFamRj/c5MxxYOntdrqRJf79EoTGmiQ2bP3rbx50Hqvo/iskZq8iBFO19FSDVSFP91x+zqQQfmP3ImRVrzyuHtLiRkkHJYDev9gep1q4zh0kODbrHnDVep11mnmqe8GPfbn3XuORLTOUnQqBDWnEDW989NRpGR8mQNR98tYITIneweQFpNY2RIC/tjXnTPR2PFoj/f54hT4n26B76cMgZLCCffjVrgRFSVNWRiO0WNEIz64OS4UjcA8UyLIRg8wY9jirLucN7w+5bnonXSz2j/P8w5CUm55rR+dEUUCJM1Ui7/Z688qzgL4Wu/Nv2ylWYrIHw77SBhTmxhKMbmlr4h+S/EAUxR7iXrikCjV/r22KqWFKrRMPqvCd7EXa/1J/GIBlLOrDCWGABKtMYcjOoyB4p7APJKneGjSo6oO1FHmQz0Xx0OoC+nUTF88L/woEv8h5w3aAZLI08SBZBxedMzwqb1Ctg98hGEapS3jOz/zNY+/+PltvlWnOowrS7bEim1ZQE6GI7tr/Xilbl0tmwmMnCm32G+ZsqHobzRuRXj1rlLfdIttc36uI5z5YTX1G16g8vosI6Uqv+SueOKuKIMPfWGXH9W/bFZ5XbW3tG/w1T9U52OkQyd/+VacKGmeVW8Sz4kexkSWKnlHZwqcqoBcuXPrdQPsp137LOnGWCz2zjw5gjfuo1DoVbIY6LOHz3ps9t4x5ixkFUfO7VyXrd6dKJ6Szs6rs29fPL20BuNGBU0ohfPn6biiHziLtO57zYX13BWn+pWuLMDKnJ5jL+mXXUM4vWrxZHF9y/egKeltGRlPD/ict+BNcjgKgqmNZifI9cyJ5iiKHkzBgIZoSrEWOz5t/4rXE4SyIZJaPFWs5XngR8vTArp54KCdkL5cg6KTAYNHqDYCVZnu3CCA3UE1nR7NMdYrUYBfUfmHnXxPOdPoPJfuORiXA+EoyrVxDKNS7PgOTWnHIVLWD5WWjH2PkjEqeovOlcQuDUq7FCKHzjiW/pBnBv90LRWztbBEKTGiLyFmJmvumFxa9pe5sU4roywLX9QOs8042jw71vJzcXsCaW9/mw73zXFYx9iPm6/UML2QgXttGCsPLe62KBItoqEWOEflsKqXYm1xYqdzea4QPFYm7x6J5iQRhU0RCKitxl0m0uQU3cPn3GyiLsKgWz5MWjrYTDZYynf9ZU2bk/Z3tZT+d1JbZy5dtUpjolnjKuYTIu0BErShUrXD0lTLxFEa0fdo2xyLBK/rg3Z0VSQ7ZUYyp33QiUaaQ+ehLJz3HxHvZAKkash6MOvQae0xHKpfMUVyDYWOmXnNiFQkiQfRVXVX7ihX11QaIgVLp1grpIhxtdLOC9hOUZnLOxyuJDvRmzG0qzbROckTwTSGbImaSeQ3tEbF/u2GtgVqYs/43tqdAC8Pj37b0YfCOQ3svDJce29vKIyyelOF8SgtiYk2j7tMlJ1+0fBD6pW+1b3vW3DBgAq64VX9lEBEdf36/Q/1EAba6aNUmftM1HWuXeXkPJ39247sZ4OsyYDQz6poxOaMiKkpcdC+bnR5qZA+tjR02XDyf6pH/9jI2HoHV85t4Xh+zpmxQFldAVQmvnyxLeqn1xLxrwgFfqnzAgHGaHsa9pXaBIQbuQ4asC6j2dtmDO8DS+GbAKET6hsZnwHFNtuMp16od5wE1tv5NlWacvIRmFXazKnZCYH2pbmFDOxhCR4fPpG4ghfyCVycsDGMfbdHMy3qWB/s0HOgoH4w20fyKkGdXyyNqrE8Tm+z6n16TSmu0NVlPTGZtlG2EfcKRT8hsya2Hg9uKfai9R/jRf7u7w6TNSnD6hK3FAoLgABz+JU+wuCu75y9eXWpODf/88HyXcI8aHVnQzXpvswtrm8oGPcnqh2mh3duns6VoOFFqnwiRnme2zcAgQYcQHwEhlSwQpceHcHE5pkg3NhwnYqQ3xGF1lvT2O7hiAVRWJWHJz5tn3QnxiWU40Zjh0NWGFBdp6rYgty8XRuRHJiP8HFIOfD+UFVQNrOYn3MjRsaDKel10jbaSEXhGFZ8MSsUuNgyb6yczh6jybqR9vuYpbIEIQNvWG3SYA0Bxa+r+bSoNW9mHUuGq5T8I4dMTv5g8G9KsDd+e8GLe45F8fpqUogmpcKnfs0fNT6w3IelN4M78kErAKp5INKMD6EfCV9mfS3+7QoDmcacLBlznqRLSFWKJBURnSVgAyHhm58tFs84Q9upzXIK2qc/3t0dquWG4tskDRdDMn6yChXb2Re8h6l6gPcmhiuoMWrjZlBSFul5D+74fkrZ4IdIT4dgNZnFUXnDKpkBjekEqsgfwH8Q4Bd9vHaEsRUFSBJvij0vyPkNUwOBCoG6yiGVu+7ldiUWZImySq6Xv3aFMWcNjfeddKgtus7xhgDonSXDWfo8VRMu3B5oVqLHGE2sXjDgvzcobu8iz1VOf6ZARPIIUtj37+TDKPUK+UXXFvmSSJthMj+TFNOWqzNiu1GDvhbFpkbwuvJHIuo4Za8SXYTvXY37DA02Ef0dWcnkZUi/GqM6hm9FxGmKlNRuy2xtj7Kh/yYM2i1LDBvJpY9lhC0kdqHHdbcKtgeJvJmHeGKcRzmZozrPX/PM84TVYuOwQf2KbM65fB4qttto4OY8cW2YBFpRoSmm81CruaQeSg/8JrYbJx7msLNvt5/J8FX2bd13siJ6JzcLuYTJVcyFrzzsVKHhJBAlVhO+9HqhG0H70cu2DfNSWX9KLM6CnjDo/3F5UDeZ4Qy98GMDOXYkuWsqQOrt/tojom7kOFSdoUUEGyr9KK3ufF2r7psJtl51I14C4Fq7Q1BqK0V+4U3X5blyXcIUxAio7sA4Vp/9/w5EBTvRyak0cYnT3YY1E2eaQY+Xd6iSQGfF0xetv0BkaRbCEzeI4F/jNHx1pTjI0xWGrLS/3QAnHVq6MSbMamZX9688RdNKUoNfJzcJQ1zhTrPaAqnLjKZMGyA2HSYVwu19frF+wSqN44l6A8JyXsmv/IbrFXgWNLGyHUfYRiAdpqRG08lMgvAAAGk64kxXQi4KMGR4Gy8+SA9H5Fl6s82J0dJO53LTradH4MKoHw4bGejxa7VQcDDUnzHoiTQfMpVYC4O4tJ3AZF827ga44RnQi+/h0y4SEdx/EgxMhYwWMu6e24Ygfd77qXvDTS4sV1oBAWyaoeLfIsV7Bq+YZo7WbcOebAQQTNc/+18tvm+uEGjqHG40Pa0cwm4yCYBIsSTQdSjlnuif6uES8tdWY5gstPr7ZgUG23+qH6npJMmlnqB/9I8HQaEIb1iy4rHbKJsfBMkylNiFPcYj4QdN83wZVyt88GwBZPqurd5vnmexWqVKK/OgYP/B30Xr2AKK642EPlrh9VlwDZbE0w8x/0qO2PLHnLDHAx2ruAPXNt8VGPwmXfok/YKi2UiWNRBu5e06euGDSuqefkYRgaWr+Fy4HM08+65AmVpw5aZUsnUf8hgxcDsEQQ3VA3sa7QM/V5qoqigXEke6R0kRkMNIugODc8nfWwflsdpFX59NnXwBAT2/TCez8ilWGEI9AdVEfbylb94GnTJ1OwHKvwdNFqs6rfKJrVc5ZFvhu8zNcjHznvCfL/b2nZvKbBCH2KS+t8ph/BnE5k9qh+3lgp3immJ6E0pVbCqvczL6T4Qufm6kgBxlCzxF/rEQ43PQ/fv5LaEe80b/B1TSp3J7AJHtssBPZY18w5VEPOARx/Af+7rxlxO/DroBIe5AI0kf4Lm5JcBKQReHono4TgvgF9+Qah6C/IjGXBjb/5h+4A6gViCfY98CTXZ/BMxkZ7m+ZBb8rrsagT7udA/gsF9fu9qzHB6uS4+LWYkJ+GvOCdXEwAjyJv0WoxPVV44OcbK5H0EEsNUmsLACbGzNf6QAl3/L7Yi0TyxkN+E8pP6dUJFiu8wK1RdRZDkoMPEvZPkAkGHFCs4KmbQzam7bA6ImcoLObb+IOybp7P/+bxbV2E0hsA1D8+oIgN8qa37i396NfXW+oJsY+a1tN6Dcx0s1uh1S+AgWhhKx5CTB/A7iLIpfbFgPsb0MRoRIYipc6bw7DP4w7VHt1+FgkG0fu5UHaUUYywoF/DS/HmGfTh+spQkF14Pau+J39TBuzHFYb1yqgId1KijOXU2Ug1vRXhTF3czSsmFfxZJLdmz5oGawjN2WbAGjBebHycO8SxyHSwYwfBPSpfrxmvalVlQqq70aav5vZlEr8ShGGURPkKlZ3avSDaV9GptiGmvz7tQhVbpyO3zxTxVJRLKHIojcJoJD5MI4Mh9lxuMCfm355u1F++7OnxMlmzSH6077I92AxznvRRFIxg8DmkyU1kzCOKxkSeqfypnpc8JWANWSkD67/nXKO/SnC/8xKrn5busEBTv9T+KS6HkFocwx5N1E4tzYdUubIl10JbWdhZf2UQU6KoYeGxCSz1PqUCKHnAMQjvfDPGvOAEU/rOIMhEyZUZwMo7ageEsn3Rdh6zEVsZRK3n0+6tdoooAyZm/4BPC46k0k9Z4kpGFSgCxQAN40FUTavlNN9bMyR00SmWLpxioNoyXy63Nw7NYbwkK3BREHpZ/fatjihCgoynlsOFrFqH+dRhjDovSt5LOJYPpgt72D4IEQhaorIewIqBtmI33+QBY/LA7PlpWP+jBw9vgKAYN9+iFcFJJo8EpdupeZ7u9Ov7m7SOF3FZW/XRCbdu1cA6lxkj93MAEkHhtNHbpnfTLccvd2tKyTLh/RusL57SF4yDRhHS0Ozu5DXbs9g/lX8K3y+1OsYLBWLmy8kwlx6aIyV9TxRX77HhHWOguK/zVvvdjhiWjx+JyDkPVxVtjV85G+rTRihGYjpMZ+a9NtyNFVuN3zVajDF14aqsOky32UV8/n//E2e2PazDiU4GITGdpmdzp233bg08NAXetd8sMrGzWUjenfqr31+ulwIpoYuzxvzgcn56aJEHalMwXpl2LuDEyvoPyh2w+U4FElfEYyivFAF16jvrxOXaAinyrW8OCRi/D6ROztG6kCRxndCBM9t/gSfN4tZz9k0NzeoBYVqCNGdDgrEHSC7WFJrY7r9QKlFjPuZvPQEZ+ABBtcg8gBcsiOVbS+q2lY9x9WyBPImzsIHSI3EgjsxD3WueiDhZ/h5LEvxjWGuscRX60JKl5E6buMc2ixO+8Si91/yAHdOU/6eUNoQ5biWb4ajfi+eLXoyGUAVCuWk8+ppPwpMgpvvyhDrbgzC/UAIgS/ZL6EugVhC5VY+swtln6qOzQwwFSIihm9WBPvS9PG4D6ozkumisGUBRnYIGtOb58aPyp3aZGdtAnbHwXVkC+nWBExoEhVJhxwWhwAAAAAA==";
+document.querySelectorAll(".lg").forEach(i=>i.src=LOGO);
+try{const ic=document.createElement("link");ic.rel="icon";ic.href=LOGO;document.head.appendChild(ic)}catch(e){}
+const T={
+fr:{title:"Journée de sensibilisation au diabète",sub:"Leo Club Hammamet · Mandat 2026-2027",pos:"Ta santé est ta richesse. Prends soin de toi, nous sommes là pour te servir !",hd:"C’est quoi le diabète ?",df:"Le diabète est une maladie où il y a trop de sucre dans le sang. Le corps ne fabrique pas assez d’insuline, ou ne l’utilise pas bien. Il existe le type 1 (souvent chez les jeunes), le type 2 (le plus fréquent, lié au mode de vie) et le diabète de grossesse.",hs:"Les symptômes",sy:"Grande soif|Envie d’uriner très souvent|Grande fatigue|Vue floue|Perte de poids sans raison|Plaies qui guérissent lentement",hh:"Comment rester en bonne santé ?",hy:"Manger équilibré : légumes, fruits, céréales complètes|Limiter sucreries et boissons sucrées|Bouger 30 minutes par jour|Garder un poids sain|Boire de l’eau|Faire un contrôle de glycémie chaque année|Bien dormir et gérer le stress",hq:"Questionnaire santé",wk:"Poids (kg)",ht:"Taille (cm)",go:"Voir mon résultat",hr:"Ton résultat",ds:"Cette plateforme informe et ne remplace pas un médecin. Aucune donnée n’est enregistrée.",pr:"Présidente : Ouali Ramla",ch:"Cheffes d’actions : Zaineb Jlassi et Hiba Banneni",y:"Oui",n:"Non",low:"Risque faible. Bravo, continue comme ça !",lowm:"Garde de bonnes habitudes et fais un contrôle de glycémie chaque année.",mid:"Risque moyen. Fais attention à ton hygiène de vie.",midm:"Parle à un médecin et fais un test de glycémie dans les prochains mois.",high:"Risque élevé. Consulte un médecin bientôt.",highm:"Prends rendez-vous pour un test de glycémie. Ce n’est pas un diagnostic, mais mieux vaut vérifier.",bh:"Ton IMC est élevé (#) : perdre du poids progressivement réduit le risque de diabète.",bm:"Ton IMC montre un léger surpoids (#) : garde une alimentation équilibrée et bouge davantage.",ts:"Essaie de marcher ou de faire du sport 30 minutes chaque jour.",tg:"Remplace les boissons sucrées par de l’eau et réduis les sucreries."},
+en:{title:"Diabetes Awareness Day",sub:"Leo Club Hammamet · Term 2026-2027",pos:"Your health is your wealth. Take care of yourself, we are here to serve you!",hd:"What is diabetes?",df:"Diabetes is a disease where there is too much sugar in the blood. The body does not make enough insulin, or does not use it well. There is type 1 (often in young people), type 2 (the most common, linked to lifestyle) and gestational diabetes.",hs:"Symptoms",sy:"Extreme thirst|Needing to urinate very often|Great tiredness|Blurred vision|Weight loss for no reason|Wounds that heal slowly",hh:"How to stay healthy?",hy:"Eat balanced: vegetables, fruits, whole grains|Limit sweets and sugary drinks|Move 30 minutes a day|Keep a healthy weight|Drink water|Get a blood sugar check every year|Sleep well and manage stress",hq:"Health questionnaire",wk:"Weight (kg)",ht:"Height (cm)",go:"See my result",hr:"Your result",ds:"This platform is for information only and does not replace a doctor. No data is saved.",pr:"President: Ouali Ramla",ch:"Action heads: Zaineb Jlassi and Hiba Banneni",y:"Yes",n:"No",low:"Low risk. Well done, keep it up!",lowm:"Keep your good habits and get a blood sugar check every year.",mid:"Medium risk. Pay attention to your lifestyle.",midm:"Talk to a doctor and get a blood sugar test in the coming months.",high:"High risk. See a doctor soon.",highm:"Make an appointment for a blood sugar test. This is not a diagnosis, but it is better to check.",bh:"Your BMI is high (#): losing weight gradually lowers diabetes risk.",bm:"Your BMI shows slight overweight (#): keep a balanced diet and move more.",ts:"Try to walk or exercise 30 minutes every day.",tg:"Replace sugary drinks with water and cut down on sweets."},
+ar:{title:"يوم التوعية بمرض السكري",sub:"ليو كلوب الحمامات · عهدة 2026-2027",pos:"صحتك هي ثروتك. اعتن بنفسك، نحن هنا لخدمتك !",hd:"ما هو مرض السكري ؟",df:"السكري مرض يرتفع فيه مستوى السكر في الدم. لا ينتج الجسم ما يكفي من الأنسولين أو لا يستعمله جيدا. يوجد النوع الأول (غالبا عند الشباب) والنوع الثاني (الأكثر انتشارا ومرتبط بنمط الحياة) وسكري الحمل.",hs:"الأعراض",sy:"عطش شديد|كثرة التبول|تعب شديد|ضبابية الرؤية|نقصان الوزن دون سبب|بطء التئام الجروح",hh:"كيف نحافظ على صحتنا ؟",hy:"غذاء متوازن : خضر وغلال وحبوب كاملة|التقليل من الحلويات والمشروبات السكرية|الحركة 30 دقيقة يوميا|المحافظة على وزن صحي|شرب الماء|قياس نسبة السكر في الدم كل سنة|النوم الجيد وتسيير الضغط النفسي",hq:"استبيان صحي",wk:"الوزن (كغ)",ht:"الطول (سم)",go:"اعرض نتيجتي",hr:"نتيجتك",ds:"هذه المنصة للتوعية ولا تعوض الطبيب. لا يتم حفظ أي بيانات.",pr:"الرئيسة : Ouali Ramla",ch:"رئيستا الأنشطة : Zaineb Jlassi و Hiba Banneni",y:"نعم",n:"لا",low:"خطر ضعيف. أحسنت، واصل هكذا !",lowm:"حافظ على عاداتك الجيدة وقس السكر في الدم كل سنة.",mid:"خطر متوسط. انتبه إلى نمط حياتك.",midm:"تحدث إلى طبيب وقم بتحليل السكر في الأشهر القادمة.",high:"خطر مرتفع. استشر طبيبا قريبا.",highm:"احجز موعدا لتحليل السكر. هذا ليس تشخيصا لكن من الأفضل التحقق.",bh:"مؤشر كتلة جسمك مرتفع (#) : إنقاص الوزن تدريجيا يقلل خطر السكري.",bm:"مؤشر كتلة جسمك يدل على زيادة طفيفة في الوزن (#) : حافظ على غذاء متوازن وتحرك أكثر.",ts:"حاول المشي أو ممارسة الرياضة 30 دقيقة كل يوم.",tg:"عوض المشروبات السكرية بالماء وقلل من الحلويات."}
+};
+const QS={
+fr:["Y a-t-il du diabète dans ta famille ?","As-tu souvent très soif ?","Urines-tu plus souvent que d’habitude, surtout la nuit ?","Te sens-tu très fatigué(e) sans raison ?","As-tu une vue floue ?","As-tu perdu du poids sans le vouloir ?","Tes plaies guérissent-elles lentement ?","Fais-tu moins de 30 minutes d’activité physique par jour ?","Manges-tu des sucreries ou bois-tu des boissons sucrées tous les jours ?","As-tu plus de 45 ans ?"],
+en:["Is there diabetes in your family?","Are you often very thirsty?","Do you urinate more often than usual, especially at night?","Do you feel very tired for no reason?","Do you have blurred vision?","Have you lost weight without trying?","Do your wounds heal slowly?","Do you do less than 30 minutes of physical activity a day?","Do you eat sweets or drink sugary drinks every day?","Are you over 45 years old?"],
+ar:["هل يوجد سكري في عائلتك ؟","هل تشعر بالعطش الشديد كثيرا ؟","هل تتبول أكثر من العادة خاصة في الليل ؟","هل تشعر بتعب شديد دون سبب ؟","هل تعاني من ضبابية في الرؤية ؟","هل نقص وزنك دون قصد ؟","هل تلتئم جروحك ببطء ؟","هل تمارس أقل من 30 دقيقة من النشاط البدني يوميا ؟","هل تأكل الحلويات أو تشرب مشروبات سكرية كل يوم ؟","هل عمرك أكثر من 45 سنة ؟"]
+};
+const P=[2,2,2,1,2,2,2,1,1,1],NAMES={fr:"Français",en:"English",ar:"العربية"};
+let lang="fr",res=null,A=[];
+function show(){
+ if(!res)return;const t=T[lang],lv=res.s<=3?"low":res.s<=7?"mid":"high";
+ const e=document.getElementById("lvl");e.textContent=t[lv];e.className=lv;
+ const items=[];
+ if(res.b)items.push(t[res.b[0]].replace("#",res.b[1]));
+ res.k.forEach(k=>items.push(t[k]));items.push(t[lv+"m"]);
+ document.getElementById("adv").innerHTML=items.map(x=>"<li>"+x+"</li>").join("");
+ document.getElementById("res").hidden=false;
 }
+function render(){
+ const t=T[lang];
+ document.documentElement.lang=lang;document.documentElement.dir=lang=="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t[e.dataset.t]);
+ document.querySelectorAll("[data-l]").forEach(e=>e.innerHTML=t[e.dataset.l=="sy"?"sy":"hy"].split("|").map(x=>"<li>"+x+"</li>").join(""));
+ document.getElementById("lang").innerHTML=Object.keys(NAMES).map(k=>"<button class='"+(k==lang?"on":"")+"' onclick=\"setLang('"+k+"')\">"+NAMES[k]+"</button>").join("");
+ document.getElementById("qs").innerHTML=QS[lang].map((q,i)=>"<div class='q'><div>"+q+"</div><label><input type='radio' name='q"+i+"' "+(A[i]===1?"checked":"")+" onchange='A["+i+"]=1'> "+t.y+"</label><label><input type='radio' name='q"+i+"' "+(A[i]===0?"checked":"")+" onchange='A["+i+"]=0'> "+t.n+"</label></div>").join("");
+ show();
+}
+function setLang(l){lang=l;render()}
+function calc(){
+ let s=0,k=[],b=null;
+ P.forEach((p,i)=>{if(A[i]===1){s+=p;if(i==7)k.push("ts");if(i==8)k.push("tg")}});
+ const w=+document.getElementById("pk").value,h=+document.getElementById("tc").value/100;
+ if(w&&h){const m=w/(h*h);
+  if(m>=30){s+=2;b=["bh",m.toFixed(1)]}else if(m>=25){s+=1;b=["bm",m.toFixed(1)]}}
+ res={s:s,k:k,b:b};show();
+ document.getElementById("res").scrollIntoView({behavior:"smooth"});
+}
+render();
 </script>
-
-<!-- LEO CLUB HAMMAMET - MULTILINGUE -->
-<style id="leo-translate-style">
-#leo-google-translate {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 999999;
-    background: white;
-    padding: 10px 14px;
-    border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0,0,0,.18);
-    font-family: Arial, sans-serif;
-    color: #222;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    max-width: 95vw;
-}
-#leo-google-translate span {
-    font-size: 14px;
-    font-weight: bold;
-}
-#google_translate_element {
-    display: inline-block;
-}
-.goog-te-gadget {
-    font-size: 0 !important;
-}
-.goog-te-gadget select {
-    font-size: 14px !important;
-    padding: 7px;
-    border-radius: 7px;
-    border: 1px solid #ccc;
-    max-width: 150px;
-}
-.goog-te-banner-frame,
-.goog-te-banner-frame.skiptranslate {
-    display: none !important;
-}
-body {
-    top: 0 !important;
-}
-html.translated-ar,
-html[lang="ar"] {
-    direction: rtl;
-}
-html[lang="ar"] body {
-    direction: rtl;
-    text-align: right;
-}
-</style>
-
-<div id="leo-google-translate">
-    <span>🌍 Langue :</span>
-    <div id="google_translate_element"></div>
-</div>
-
-<script>
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'fr,en,ar',
-        autoDisplay: false,
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-}
-
-(function () {
-    function updateLanguageDirection() {
-        var lang = document.documentElement.lang || 'fr';
-        if (lang.toLowerCase().indexOf('ar') === 0) {
-            document.documentElement.classList.add('translated-ar');
-            document.documentElement.setAttribute('dir', 'rtl');
-            document.body.setAttribute('dir', 'rtl');
-        } else {
-            document.documentElement.classList.remove('translated-ar');
-            document.documentElement.setAttribute('dir', 'ltr');
-            document.body.setAttribute('dir', 'ltr');
-        }
-    }
-
-    window.addEventListener('load', function () {
-        updateLanguageDirection();
-
-        var observer = new MutationObserver(updateLanguageDirection);
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['lang']
-        });
-    });
-})();
-</script>
-
-<script id="leo-google-translate"
-src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script>
-<!-- FIN TRADUCTION -->
 </body>
 </html>
-
-
-
-
