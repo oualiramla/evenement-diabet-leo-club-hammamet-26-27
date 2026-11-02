@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -147,6 +147,104 @@ function calcul(){
  const r=document.getElementById('res');r.style.display='block';r.scrollIntoView({behavior:'smooth'});
 }
 </script>
+
+<!-- LEO CLUB HAMMAMET - MULTILINGUE -->
+<style id="leo-translate-style">
+#leo-google-translate {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 999999;
+    background: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.18);
+    font-family: Arial, sans-serif;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 95vw;
+}
+#leo-google-translate span {
+    font-size: 14px;
+    font-weight: bold;
+}
+#google_translate_element {
+    display: inline-block;
+}
+.goog-te-gadget {
+    font-size: 0 !important;
+}
+.goog-te-gadget select {
+    font-size: 14px !important;
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    max-width: 150px;
+}
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0 !important;
+}
+html.translated-ar,
+html[lang="ar"] {
+    direction: rtl;
+}
+html[lang="ar"] body {
+    direction: rtl;
+    text-align: right;
+}
+</style>
+
+<div id="leo-google-translate">
+    <span>🌍 Langue :</span>
+    <div id="google_translate_element"></div>
+</div>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,ar',
+        autoDisplay: false,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+
+(function () {
+    function updateLanguageDirection() {
+        var lang = document.documentElement.lang || 'fr';
+        if (lang.toLowerCase().indexOf('ar') === 0) {
+            document.documentElement.classList.add('translated-ar');
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.body.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.classList.remove('translated-ar');
+            document.documentElement.setAttribute('dir', 'ltr');
+            document.body.setAttribute('dir', 'ltr');
+        }
+    }
+
+    window.addEventListener('load', function () {
+        updateLanguageDirection();
+
+        var observer = new MutationObserver(updateLanguageDirection);
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['lang']
+        });
+    });
+})();
+</script>
+
+<script id="leo-google-translate"
+src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+<!-- FIN TRADUCTION -->
 </body>
 </html>
 
