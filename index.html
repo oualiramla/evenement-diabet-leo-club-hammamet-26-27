@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo Club Hammamet - Sensibilisation au diabète</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Tahoma,Arial,sans-serif;background:#eef5fb;color:#12365a;line-height:1.7}
+header{background:linear-gradient(135deg,#0b4f7c,#1e88c8);color:#fff;text-align:center;padding:24px 16px}
+header img{width:120px;background:#fff;border-radius:50%;padding:8px}
+header h1{margin:10px 0 4px;font-size:1.5rem}
+.sl{font-size:1.3rem;font-weight:bold;letter-spacing:2px}
+.lang{position:absolute;top:10px;right:10px}
+.lang button{background:#fff;color:#0b4f7c;border:0;border-radius:20px;padding:8px 16px;font-weight:bold;cursor:pointer}
+main{max-width:800px;margin:auto;padding:16px}
+section{background:#fff;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(11,79,124,.12)}
+h2{color:#0b4f7c;margin-top:0;border-bottom:3px solid #1e88c8;padding-bottom:6px}
+.pos{background:#dff0fb;border-radius:12px;padding:12px;text-align:center;font-weight:bold}
+.q{padding:10px 0;border-bottom:1px solid #e1ecf5}
+.q label{margin-inline-end:16px;cursor:pointer}
+input[type=number]{width:110px;padding:8px;border:1px solid #9ec5e3;border-radius:8px}
+.btn{background:#0b4f7c;color:#fff;border:0;border-radius:25px;padding:12px 28px;font-size:1rem;cursor:pointer;margin-top:12px}
+#res{display:none}
+.low{color:#1b8a3a}.mid{color:#d98200}.high{color:#c62828}
+footer{text-align:center;padding:20px;background:#0b4f7c;color:#fff;font-size:.9rem}
+body.ar .fr{display:none} body:not(.ar) .arb{display:none}
+body.ar{direction:rtl}
+/* ribbon-style */
+body{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='0.10' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");background-size:80px 80px}
+header{position:relative}
+header::before,header::after{content:"";position:absolute;top:24px;width:80px;height:80px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
+header::before{left:16px}
+header::after{right:16px}
+h2::before{content:"";display:inline-block;width:30px;height:30px;margin-inline-end:10px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
+.pos::before,.pos::after{content:"";display:inline-block;width:26px;height:26px;margin:0 8px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
+footer::before{content:"";display:block;height:46px;margin-bottom:10px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") repeat-x center/46px}
+@media(max-width:560px){header::before,header::after{width:42px;height:42px;top:60px}}
+/* ribbon-style */
+body{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='0.10' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>");background-size:80px 80px}
+header{position:relative}
+header::before,header::after{content:"";position:absolute;top:24px;width:80px;height:80px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
+header::before{left:16px}
+header::after{right:16px}
+h2::before{content:"";display:inline-block;width:30px;height:30px;margin-inline-end:10px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
+.pos::before,.pos::after{content:"";display:inline-block;width:26px;height:26px;margin:0 8px;vertical-align:middle;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%231e88c8' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") no-repeat center/contain}
+footer::before{content:"";display:block;height:46px;margin-bottom:10px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ffffff' stroke-opacity='1' stroke-width='12' stroke-linecap='round'><path d='M50 8C20 8 25 35 50 55L74 92'/><path d='M50 8C80 8 75 35 50 55L26 92'/></g></svg>") repeat-x center/46px}
+@media(max-width:560px){header::before,header::after{width:42px;height:42px;top:60px}}
+</style>
+<link rel="icon" href="logo2.png">
+</head>
+<body>
+<div class="lang"><button onclick="document.body.classList.toggle('ar')">FR / عربي</button></div>
+<header>
+<img src="logo.png" alt="Leo Club Hammamet">
+<svg width="70" height="70" viewBox="0 0 100 100" style="margin:8px"><circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="10"/></svg>
+<div class="sl">WE SERVE</div>
+<h1><span class="fr">Journée de sensibilisation au diabète</span><span class="arb">يوم التوعية بمرض السكري</span></h1>
+<div><span class="fr">Leo Club Hammamet - Mandat 2026-2027</span><span class="arb">ليو كلوب الحمامات - عهدة 2026-2027</span></div>
+</header>
+<main>
+<div class="pos">
+<span class="fr">Ta santé est ta richesse. Prends soin de toi, nous sommes là pour te servir !</span>
+<span class="arb">صحتك هي ثروتك. اعتن بنفسك، نحن هنا لخدمتك !</span>
+</div>
+
+<section>
+<h2>🩸 <span class="fr">C'est quoi le diabète ?</span><span class="arb">ما هو مرض السكري ؟</span></h2>
+<p class="fr">Le diabète est une maladie où il y a trop de sucre dans le sang. Le corps ne fabrique pas assez d'insuline, ou il ne l'utilise pas bien. Il existe le type 1 (souvent chez les jeunes), le type 2 (le plus fréquent, lié au mode de vie) et le diabète de grossesse.</p>
+<p class="arb">السكري مرض يرتفع فيه مستوى السكر في الدم. لا ينتج الجسم ما يكفي من الأنسولين أو لا يستعمله جيدا. يوجد النوع الأول (غالبا عند الشباب) والنوع الثاني (الأكثر انتشارا ومرتبط بنمط الحياة) وسكري الحمل.</p>
+</section>
+
+<section>
+<h2>⚠️ <span class="fr">Les symptômes</span><span class="arb">الأعراض</span></h2>
+<ul class="fr"><li>Grande soif</li><li>Envie d'uriner très souvent</li><li>Grande fatigue</li><li>Vue floue</li><li>Perte de poids sans raison</li><li>Plaies qui guérissent lentement</li></ul>
+<ul class="arb"><li>عطش شديد</li><li>كثرة التبول</li><li>تعب شديد</li><li>ضبابية الرؤية</li><li>نقصان الوزن دون سبب</li><li>بطء التئام الجروح</li></ul>
+</section>
+
+<section>
+<h2>🥗 <span class="fr">Comment rester en bonne santé ?</span><span class="arb">كيف نحافظ على صحتنا ؟</span></h2>
+<ul class="fr"><li>Manger équilibré : légumes, fruits, céréales complètes</li><li>Limiter sucreries et boissons sucrées</li><li>Bouger 30 minutes par jour (marche, sport)</li><li>Garder un poids sain</li><li>Boire de l'eau</li><li>Faire un contrôle de glycémie chaque année</li><li>Dormir suffisamment et gérer le stress</li></ul>
+<ul class="arb"><li>غذاء متوازن : خضر وغلال وحبوب كاملة</li><li>التقليل من الحلويات والمشروبات السكرية</li><li>الحركة 30 دقيقة يوميا (مشي، رياضة)</li><li>المحافظة على وزن صحي</li><li>شرب الماء</li><li>قياس نسبة السكر في الدم كل سنة</li><li>النوم الكافي وتسيير الضغط النفسي</li></ul>
+</section>
+
+<section>
+<h2>📝 <span class="fr">Questionnaire santé</span><span class="arb">استبيان صحي</span></h2>
+<div class="q">
+<span class="fr">Poids (kg)</span><span class="arb">الوزن (كغ)</span> <input type="number" id="poids" min="20" max="300">
+&nbsp;<span class="fr">Taille (cm)</span><span class="arb">الطول (سم)</span> <input type="number" id="taille" min="100" max="230">
+</div>
+<div id="qs"></div>
+<button class="btn" onclick="calcul()"><span class="fr">Voir mon résultat</span><span class="arb">اعرض نتيجتي</span></button>
+</section>
+
+<section id="res">
+<h2>💙 <span class="fr">Ton résultat</span><span class="arb">نتيجتك</span></h2>
+<div id="niveau" style="font-size:1.3rem;font-weight:bold"></div>
+<div id="conseils"></div>
+<p><small class="fr">Cette plateforme sert à informer et ne remplace pas un médecin. Aucune donnée n'est enregistrée.</small>
+<small class="arb">هذه المنصة للتوعية فقط ولا تعوض الطبيب. لا يتم حفظ أي بيانات.</small></p>
+</section>
+</main>
+
+<footer>
+<img src="logo2.png" alt="Leo Club Hammamet" style="width:90px;background:#fff;border-radius:50%;padding:6px;margin-bottom:8px">
+<div><b>WE SERVE</b> - Leo Club Hammamet 2026-2027</div>
+<div><span class="fr">Présidente : Ouali Ramla</span><span class="arb">الرئيسة : Ouali Ramla</span></div>
+<div><span class="fr">Cheffes d'actions : Zaineb Jlassi et Hiba Banneni</span><span class="arb">رئيسات الأنشطة : Zaineb Jlassi و Hiba Banneni</span></div>
+</footer>
+
+<script>
+const Q=[
+{fr:"Y a-t-il du diabète dans ta famille ?",ar:"هل يوجد سكري في عائلتك ؟",p:2,t:null},
+{fr:"As-tu souvent très soif ?",ar:"هل تشعر بالعطش الشديد كثيرا ؟",p:2,t:null},
+{fr:"Urines-tu plus souvent que d'habitude, surtout la nuit ?",ar:"هل تتبول أكثر من العادة خاصة في الليل ؟",p:2,t:null},
+{fr:"Te sens-tu très fatigué(e) sans raison ?",ar:"هل تشعر بتعب شديد دون سبب ؟",p:1,t:null},
+{fr:"As-tu une vue floue ?",ar:"هل تعاني من ضبابية في الرؤية ؟",p:2,t:null},
+{fr:"As-tu perdu du poids sans le vouloir ?",ar:"هل نقص وزنك دون قصد ؟",p:2,t:null},
+{fr:"Tes plaies guérissent-elles lentement ?",ar:"هل تلتئم جروحك ببطء ؟",p:2,t:null},
+{fr:"Fais-tu moins de 30 minutes d'activité physique par jour ?",ar:"هل تمارس أقل من 30 دقيقة من النشاط البدني يوميا ؟",p:1,
+ t:{fr:"Essaie de marcher ou de faire du sport 30 minutes chaque jour.",ar:"حاول المشي أو ممارسة الرياضة 30 دقيقة كل يوم."}},
+{fr:"Manges-tu des sucreries ou bois-tu des boissons sucrées tous les jours ?",ar:"هل تأكل الحلويات أو تشرب مشروبات سكرية كل يوم ؟",p:1,
+ t:{fr:"Remplace les boissons sucrées par de l'eau et réduis les sucreries.",ar:"عوض المشروبات السكرية بالماء وقلل من الحلويات."}},
+{fr:"As-tu plus de 45 ans ?",ar:"هل عمرك أكثر من 45 سنة ؟",p:1,t:null}
+];
+const c=document.getElementById('qs');
+Q.forEach((q,i)=>{c.innerHTML+=`<div class="q"><div><span class="fr">${q.fr}</span><span class="arb">${q.ar}</span></div>
+<label><input type="radio" name="q${i}" value="1"> <span class="fr">Oui</span><span class="arb">نعم</span></label>
+<label><input type="radio" name="q${i}" value="0"> <span class="fr">Non</span><span class="arb">لا</span></label></div>`});
+
+function calcul(){
+ let s=0, cons=[];
+ Q.forEach((q,i)=>{const r=document.querySelector(`input[name=q${i}]:checked`);
+  if(r&&r.value==="1"){s+=q.p; if(q.t)cons.push(q.t);}});
+ const p=+document.getElementById('poids').value, t=+document.getElementById('taille').value/100;
+ if(p&&t){const imc=p/(t*t);
+  if(imc>=30){s+=2;cons.push({fr:"Ton IMC est élevé ("+imc.toFixed(1)+") : une perte de poids progressive protège ton cœur et réduit le risque de diabète.",ar:"مؤشر كتلة جسمك مرتفع ("+imc.toFixed(1)+") : إنقاص الوزن تدريجيا يحمي قلبك ويقلل خطر السكري."});}
+  else if(imc>=25){s+=1;cons.push({fr:"Ton IMC montre un léger surpoids ("+imc.toFixed(1)+") : garde une alimentation équilibrée et bouge davantage.",ar:"مؤشر كتلة جسمك يدل على زيادة طفيفة في الوزن ("+imc.toFixed(1)+") : حافظ على غذاء متوازن وتحرك أكثر."});}
+ }
+ let n,cl,m;
+ if(s<=3){cl="low";n={fr:"Risque faible. Bravo, continue comme ça !",ar:"خطر ضعيف. أحسنت، واصل هكذا !"};m={fr:"Garde de bonnes habitudes et fais un contrôle de glycémie chaque année.",ar:"حافظ على عاداتك الجيدة وقس السكر في الدم مرة كل سنة."};}
+ else if(s<=7){cl="mid";n={fr:"Risque moyen. Fais attention à ton hygiène de vie.",ar:"خطر متوسط. انتبه إلى نمط حياتك."};m={fr:"Parle à un médecin et fais un test de glycémie dans les prochains mois.",ar:"تحدث إلى طبيب وقم بتحليل السكر في الأشهر القادمة."};}
+ else{cl="high";n={fr:"Risque élevé. Consulte un médecin bientôt.",ar:"خطر مرتفع. استشر طبيبا قريبا."};m={fr:"Prends rendez-vous pour un test de glycémie. Ce n'est pas un diagnostic, mais il vaut mieux vérifier.",ar:"احجز موعدا لتحليل السكر. هذا ليس تشخيصا لكن من الأفضل التحقق."};}
+ cons.push(m);
+ document.getElementById('niveau').innerHTML=`<span class="${cl}"><span class="fr">${n.fr}</span><span class="arb">${n.ar}</span></span>`;
+ document.getElementById('conseils').innerHTML="<ul>"+cons.map(x=>`<li><span class="fr">${x.fr}</span><span class="arb">${x.ar}</span></li>`).join("")+"</ul>";
+ const r=document.getElementById('res');r.style.display='block';r.scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
+
+
+
+
